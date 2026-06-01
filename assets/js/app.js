@@ -27,9 +27,6 @@ const personajes = [
 ];
 
 const galeria = document.querySelector("#galeria");
-const formPersonaje = document.querySelector("#formPersonaje");
-const inputNombre = document.querySelector("#nombre");
-const inputImagen = document.querySelector("#imagen");
 const inputFiltro = document.querySelector("#filtro");
 const btnFiltrar = document.querySelector("#btnFiltrar");
 const btnMostrarTodos = document.querySelector("#btnMostrarTodos");
@@ -44,50 +41,11 @@ function renderizarPersonajes(listaPersonajes) {
           <img src="${imagen}" class="card-img-top" alt="${nombre}">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">${nombre}</h5>
-            <button class="btn btn-danger mt-auto btn-eliminar" data-id="${id}">
-              Eliminar
-            </button>
           </div>
         </div>
       </div>
     `;
-  });
-
-  agregarEventosEliminar();
-}
-
-function agregarEventosEliminar() {
-  const botonesEliminar = document.querySelectorAll(".btn-eliminar");
-
-  botonesEliminar.forEach((boton) => {
-    boton.addEventListener("click", () => {
-      const id = Number(boton.dataset.id);
-      eliminarPersonaje(id);
-    });
-  });
-}
-
-function agregarPersonaje(evento) {
-  evento.preventDefault();
-
-  const nuevoPersonaje = {
-    id: Date.now(),
-    nombre: inputNombre.value.trim(),
-    imagen: inputImagen.value.trim()
-  };
-
-  personajes.push(nuevoPersonaje);
-  formPersonaje.reset();
-  renderizarPersonajes(personajes);
-}
-
-function eliminarPersonaje(id) {
-  const indice = personajes.findIndex((personaje) => personaje.id === id);
-
-  if (indice !== -1) {
-    personajes.splice(indice, 1);
-    renderizarPersonajes(personajes);
-  }
+  })
 }
 
 function filtrarPersonajes() {
@@ -99,9 +57,7 @@ function filtrarPersonajes() {
 
   renderizarPersonajes(personajesFiltrados);
 }
-
-formPersonaje.addEventListener("submit", agregarPersonaje);
-btnFiltrar.addEventListener("click", filtrarPersonajes);
+btnFiltrar.addEventListener("Click" , filtrarPersonajes);
 
 btnMostrarTodos.addEventListener("click", () => {
   inputFiltro.value = "";
