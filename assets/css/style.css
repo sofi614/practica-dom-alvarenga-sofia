@@ -1,6 +1,7 @@
 body {
   min-height: 100vh;
   background: linear-gradient( rgba(0,0,0,0.55), rgba(0,0,0,0.55));
+  background-image: url(https://thumbs.dreamstime.com/b/fondo-del-estilo-c%C3%B3mic-textura-de-la-impresi%C3%B3n-semitono-111307080.jpg?w=768);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -45,6 +46,7 @@ header h1 {
 
 .card-personaje {
   overflow: hidden;
+  border: 3px solid black;
   border-radius: 18px;
   transition: all .3s ease;
 }
@@ -76,6 +78,14 @@ header h1 {
 
 .btn-eliminar:hover {
   transform: scale(1.05);
+}
+
+#btnMostrarTodos{
+    display: inline-block;
+    margin-top: 10px;
+    color: #198754;
+    font-weight: 500;
+    text-decoration: none;
 }
 
 footer {

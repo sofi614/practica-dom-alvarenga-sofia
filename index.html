@@ -48,13 +48,30 @@
 
           <div class="col-md-2 d-grid">
             <button class="btn btn-primary">
-              <i class="bi bi-plus-circle"></i> Agregar
+              <i class="circle"></i> Agregar
             </button>
           </div>
         </form>
       </section>
 
       <section class="card p-3 shadow-sm mb-4">
+        <h2 class="h4">Buscar por nombre</h2>
+
+        <input
+          type="text"
+          id="filtro"
+          class="form-control mb-2"
+          placeholder="Buscar personaje"
+        />
+
+        <button id="btnFiltrar" class="btn btn-success">Buscar</button>
+
+        <div class="mt-2">
+          <a href="#" id="btnMostrarTodos"> Ver todos los personajes </a>
+        </div>
+      </section>
+
+      <!-- <section class="card p-3 shadow-sm mb-4">
         <h2 class="h4">Buscar por nombre</h2>
 
         <div class="input-group">
@@ -71,7 +88,7 @@
             Mostrar todos
           </button>
         </div>
-      </section>
+      </section> -->
 
       <section>
         <div id="galeria" class="row g-4"></div>
@@ -82,6 +99,6 @@
       <p class="mb-0">Proyecto DOM con JavaScript</p>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
