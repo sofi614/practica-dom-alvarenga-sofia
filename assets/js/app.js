@@ -102,7 +102,6 @@ function filtrarPersonajes() {
 
 formPersonaje.addEventListener("submit", agregarPersonaje);
 btnFiltrar.addEventListener("click", filtrarPersonajes);
-
 btnMostrarTodos.addEventListener("click", () => {
   inputFiltro.value = "";
   renderizarPersonajes(personajes);
